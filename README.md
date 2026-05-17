@@ -1,58 +1,39 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# tracker-pengeluaran-Harian
+Implementasi konsep Model View Controller (MVC) menggunakan Framework Laravel. Aplikasi yang dibuat yaitu aplikasi untuk mencatat dan melacak pengeluaran harian. Fitur yang tersedia meliputi tambah, edit, hapus, dan filter pengeluaran berdasarkan bulan dan kategori, serta menampilkan ringkasan total pengeluaran.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Struktur MVC
+| Komponen   | File                                             |
+| ---------- | ------------------------------------------------ |
+| Model      | `app/Models/Pengeluaran.php`                     |
+|            | `app/Models/Kategori.php`                        |
+| View       | `resources/views/pengeluaran/`                   |
+|            | `index.blade.php`                                |
+|            | `create.blade.php`                               |
+|            | `edit.blade.php`                                 |
+|            | `layouts/app.blade.php`                          |
+| Controller | `app/Http/Controllers/PengeluaranController.php` |
+| Routes     | `routes/web.php`                                 |
 
-## About Laravel
+# Fitur
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Dashboard (tampilan utama berisi ringkasan total pengeluaran bulan ini, hari ini, dan jumlah transaksi)
+<img width="865" height="555" alt="image" src="https://github.com/user-attachments/assets/1e23e168-9956-45e3-aad6-92be00093439" />
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Tambah Pengeluaran (form untuk mencatat pengeluaran baru dengan kategori, judul, jumlah, tanggal, dan catatan)
+<img width="921" height="544" alt="image" src="https://github.com/user-attachments/assets/27f1423b-f42d-47a3-bd76-d4df7b6437bb" />
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Edit Pengeluaran (ubah data pengeluaran yang sudah dicatat)
+<img width="934" height="548" alt="image" src="https://github.com/user-attachments/assets/16dfb68a-c18b-4dbe-b83c-28da5b104fa6" />
 
-## Learning Laravel
+Hapus Pengeluaran (hapus data pengeluaran dengan konfirmasi)
+<img width="859" height="445" alt="image" src="https://github.com/user-attachments/assets/8509ed21-42fd-41da-8703-efd1c348889e" />
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Filter Bulan (filter daftar pengeluaran berdasarkan bulan dan tahun)
+<img width="883" height="253" alt="image" src="https://github.com/user-attachments/assets/d211028f-dc5c-4a22-8a1a-2dc6c9138a1e" />
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Filter Kategori (filter pengeluaran berdasarkan kategori (Makanan, Transportasi, Belanja, dll.))
+<img width="835" height="394" alt="image" src="https://github.com/user-attachments/assets/e021d9cd-6bc6-4f26-9245-e7b40dd74906" />
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+Total Otomatis (total pengeluaran dihitung otomatis di bawah tabel)
+<img width="852" height="419" alt="image" src="https://github.com/user-attachments/assets/35ae68dd-1936-4759-a5a8-ea055e844817" />
 
-## Agentic Development
-
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
-
-```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
-```
-
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
